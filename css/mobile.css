@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: white;
+  overflow-x: hidden;
+}
+.body-noscroll {
+  overflow-y: hidden;
+}
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.header-bg {
+  background: #df4040;
+  position: fixed;
+  top:-0.2rem;
+  width: 100%;
+  height: 10vh;
+  padding: 0.2rem;
+  border-radius: 1px solid black;
+  z-index: 10;
+}
+
+.logo {
+  position: fixed;
+  color: #f2f2f2;
+  top: 1.4rem;
+  font-size: 20px;
+  margin-left: 1rem;
+  z-index: 10;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.8);
+  z-index: 9;
+}
+.nav-hide {
+  display: none;
+}
+nav ul {
+  transform: translate(25%,50%);
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+nav ul li {
+  padding: 1rem;
+  color: white;
+}
+nav ul li a {
+   color: inherit;
+}
+nav ul li.username {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width:0.1rem;
+  height: 0.5px;
+  background: #df4040;
+  border-radius: 50% 0 100% 50%;
+  transform: rotate(90deg) scale(.7);
+}
+nav ul li.username p {
+  position: relative;
+  transform: translate(-45%,-90%) rotate(-90deg) scale(1.4);
+  padding-left: 1rem;
+}
+nav ul li.username:hover {
+  cursor: pointer;
+}
+.menu {
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 11;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.menu:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.whiten{
+  background: white;
+  box-shadow: 0 .1rem 0.1rem rgba(0, 0, 0, .2);
+}
+.darken {
+  color: black;
+}
+.hide {
+  display: none;
+}
+
+.menu:hover .bar,
+.menu:hover .bar::after,
+.menu:hover .bar::before{
+  background-color: #df4040;
+}
+
+.bar,
+.bar::after,
+.bar::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 1px;
+  background-color: rgba(255,255,255,1);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 650ms;
+}
+
+.bar::before {
+  top: -1rem;
+}
+
+.bar::after {
+  top: 0.5rem;
+}
+
+.menu.open .bar {
+  background-color: transparent;
+}
+
+.open:hover .bar {
+  background: white !important:;
+}
+
+.open .bar::before {
+  transform: rotate(-45deg) translateY(0.6rem);
+  margin-right: 0.5rem;
+  background: white;
+}
+
+.open .bar::after {
+  transform: rotate(45deg) translateY(-0.6rem);
+  margin-right: 0.5rem;
+  background: white;
+}
+
+.open.bar::before,
+.open.bar::after {
+  top: 0;
+}
+
+.container {
+  margin: 2.9rem 0;
+  padding: 5% 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jobs-main-title {
+  position: absolute;
+  color: #df4040;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 2rem;
+  z-index: 6;
+  transform: translate(160%,40%);
+}
+.job-container {
+  padding: 6% 1%;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  background: rgba(255,255,255,.97);
+  justify-content: space-between;
+  transition: scale 300ms ease-in-out;
+  /*box-shadow: 0 .1rem 0.1rem rgba(0, 0, 0, .2);*/
+}
+.job-container:first-child {
+  padding-top: 24%;
+}
+.container-content {
+  margin: 0;
+  width: 100%;
+  background: url("../images/profile/profile-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.job-container:hover {
+  cursor: pointer;
+  transform: scale(1.001);
+}
+
+.job-container .blank {
+  flex-basis: 4rem;
+  height: 4rem;
+  /*border: 1px solid black;*/
+  border-radius: 4px;
+  background: url("../images/profile/profile-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.job-container .job-info{
+  flex-basis: 75%;
+}
+
+.job-container .job-info > h3 {
+  color: black;
+  font-size: 13px;
+}
+
+.job-container .job-info > p {
+  font-size: 13px;
+}
+
+button.more {
+  margin-top: 0.4rem;
+  background: #df4040;
+  color: white;
+  border: 1px solid #df4040;
+  border-radius: 3px;
+}
+
+button.more:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.post-job-error-container {
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.9);
+  color: white;
+}
+
+.post-job-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  transform: translate(0,900%);
+}
+
+.close-error {
+  transform: translate(200%,900%);
+  width: 4rem;
+  background: #df4040;
+  border-radius: 3px;
+  border: 2px solid #df4040;
+  color: white;
+}
+
+.close-error:hover {
+  cursor: pointer;
+  opacity: .9;
+}

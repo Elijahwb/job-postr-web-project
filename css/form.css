@@ -1,0 +1,142 @@
+.login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: ghostwhite;
+  transition: all 100ms ease-in;
+  transform: translate(10%, 90%);
+  box-shadow: 0 .1rem 0.1rem rgba(0, 0, 0, .2);
+}
+
+.login-form:hover {
+  transform: translate(10%, 89%);
+  box-shadow: 0 .5rem 0.5rem rgba(0, 0, 0, .2);
+}
+
+p {
+  font-size: 14px;
+}
+
+.login-item {
+  padding: 1rem 0.5rem;
+}
+
+.type > input {
+  height: 2rem;
+  width: 15rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid ghostwhite;
+}
+
+.login-form div:last-child > input {
+  padding: 0.2rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #08c2c8;
+  text-align: center;
+  color: white;
+  background: #08c2c8;
+}
+
+.login-form div:last-child > input:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.login-header{
+  position: fixed;
+  color: #08c2c8;
+  transform: translate(173%,320%);
+}
+
+.login-error {
+  position: fixed;
+  padding: 0.8rem 0;
+  transform: translate(12%,320%);
+  color: #08c2c8;
+}
+
+.login-help {
+  position: fixed;
+  padding: 0.8rem 0;
+  transform: translate(160%,340%);
+  color: black;
+  font-size: 12px;
+}
+
+.login-help > a {
+  color: #08c2c8;
+}
+
+.login-help > a:hover {
+  cursor: pointer;
+}
+
+.signup-help {
+  position: fixed;
+  padding: 0.8rem 0;
+  transform: translate(60%,330%);
+  color: black;
+  font-size: 12px;
+}
+
+.signup-header{
+  position: fixed;
+  color: #08c2c8;
+  transform: translate(130%,320%);
+}
+
+.post-job-header{
+  position: fixed;
+  color: #08c2c8;
+  transform: translate(100%,320%);
+}
+
+.signup-help > a {
+  color: #08c2c8;
+  margin-left: 30%;
+}
+
+.signup-help > a:hover {
+  cursor: pointer;
+}
+
+.signup {
+  transform: translate(10%, 60%);
+}
+
+.signup.error{
+  transform: translate(10%, 50%);
+}
+
+.signup.error .type:first-child > input{
+  border: 1px solid #08c2c8;
+}
+
+.signup.error:hover{
+  transform: translate(10%, 48%);
+}
+
+.signup:hover {
+  transform: translate(10%, 58%);
+  box-shadow: 0 .5rem 0.5rem rgba(0, 0, 0, .2);
+}
+
+.user-exists {
+  margin-top: 0.5rem;
+  margin-left: 0;
+  background: rgba(223,64,64,.7);
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+}
+
+.job-description {
+  border: 1px solid white;
+  text-align: center;
+  align-items: center;
+  border-radius: 4px;
+}
